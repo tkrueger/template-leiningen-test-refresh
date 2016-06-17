@@ -1,6 +1,6 @@
-(defproject leiningen-test-refresh-template "0.1.0-SNAPSHOT"
+(defproject template-leiningen-test-refresh "0.1.0-SNAPSHOT"
   :description "Template for leinigen plus test-refresh"
-  :url "http://github.com/tkrueger/templates/leiningen-test-refresh"
+  :url "http://github.com/tkrueger/template-leiningen-test-refresh"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [
