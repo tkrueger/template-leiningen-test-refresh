@@ -4,4 +4,4 @@
 
 (deftest a-test
   (testing "FIXME, I fail."
-    (is (= 0 1))))
+    (is (= (hash-map :key1 1, :key2 2) (hash-map :key1 1, :key2 3)))))
