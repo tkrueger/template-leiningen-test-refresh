@@ -9,5 +9,14 @@
   :target-path "target/%s"
   :profiles {
              :uberjar {:aot :all}
-             :dev {:plugins [[com.jakemccrary/lein-test-refresh "0.15.0"]]}}
+             :dev {
+                   ; auto-runs tests in repl, use with "lein test-refresh"
+                   :plugins [[com.jakemccrary/lein-test-refresh "0.15.0"]]
+
+                   ; Humane test ouput, pretty-prints test output and does diffs
+                   :dependencies [[pjstadig/humane-test-output "0.8.0"]]
+                   :injections [(require 'pjstadig.humane-test-output)
+                                (pjstadig.humane-test-output/activate!)]}}
+
+  ; have test-refresh give notifications after each run
   :test-refresh {:notify-command ["terminal-notifier" "-title" "Tests" "-message"]})
